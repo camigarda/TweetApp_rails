@@ -2,13 +2,24 @@
 
 <h1>Tweets</h1>
 
+
 <div id="tweets">
-  <% @tweets.each do |tweet| %>
-    <%= render tweet %>
-    <p>
-      <%= link_to "Show this tweet", tweet %>
-    </p>
-  <% end %>
+
+    <table class="table table-striped-columns">
+    <tr>
+      <td>Usuario</td>
+      <td>Mensaje</td>
+      <td>Ver este Tweet</td>
+    </tr>
+    <% @tweets.each do |tweet| %>
+    <tr>
+       <td> <%= tweet.userName %> </td>
+       <td> <%= tweet.description %> </td>
+       <td> <%= link_to "Show this tweet", tweet %> </td>
+    </tr>
+    <% end %>
+    </table>
 </div>
 
+<%= raw pagy_nav(@pagy)%>
 <%= link_to "New tweet", new_tweet_path %>

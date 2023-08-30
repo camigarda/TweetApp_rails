@@ -244,6 +244,7 @@ DEPENDENCIES
   faker (~> 3.2)
   importmap-rails
   jbuilder
+  mini_racer
   pagy (~> 6.0)
   pg (~> 1.1)
   pg_search (~> 2.3)
