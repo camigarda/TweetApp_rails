@@ -11,18 +11,6 @@ class TweetsController < ApplicationController
   end
 
 
-  # app/controllers/tweets_controller.rb
-
-  def search
-    @tweets = Tweet.search_full_text(params[:query_text]).paginate(page: params[:page], per_page: 10)
-    render 'index'
-  end
-
-
-  # GET /tweets/1 or /tweets/1.json
-  def show
-  end
-
   # GET /tweets/new
   def new
     @tweet = Tweet.new
